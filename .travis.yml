@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- 10
+before_install:
+- npm install -g npm
+script:
+- npm install
+- npm test
+deploy:
+  provider: heroku
+  api_key: 79e06ef6-833a-4a3a-a854-03763371ce66
+  app: hello-node-suv
+  on:
+    repo: suvendupothal/hello-node-suv
+    branch: master
